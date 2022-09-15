@@ -311,21 +311,21 @@ public class GildedRoseTest {
     StringBuilder errorBuilder = new StringBuilder();
 
     boolean daysRemainingError = daysRemaining != rose.getDaysRemaining();
-    if (daysRemainingError == true) {
+    if (daysRemainingError) {
       errorBuilder.append("Expected daysRemaining <").append(daysRemaining).append("> but was <")
           .append(rose.getDaysRemaining()).append(">.");
     }
 
     boolean qualityError = quality != rose.getQuality();
-    if (qualityError == true) {
-      if (daysRemainingError == true) {
+    if (qualityError) {
+      if (daysRemainingError) {
         errorBuilder.append(" ");
       }
       errorBuilder.append("Expected quality <").append(quality).append("> but was <").append(rose.getQuality())
           .append(">.");
     }
 
-    if (qualityError == true || daysRemainingError == true) {
+    if (qualityError || daysRemainingError) {
       throw new AssertionFailedError(errorBuilder.toString());
     }
   }
