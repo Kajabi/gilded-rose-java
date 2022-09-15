@@ -24,16 +24,16 @@ public class GildedRose {
   }
 
   public void tick() {
-    if (this.name != "Aged Brie" && this.name != "Backstage passes to a TAFKAL80ETC concert") {
+    if (!this.name.equals("Aged Brie") && !this.name.equals("Backstage passes to a TAFKAL80ETC concert")) {
       if (this.quality > 0) {
-        if (this.name != "Legendary Sulfuras, Hand of Ragnaros") {
+        if (!this.name.equals("Legendary Sulfuras, Hand of Ragnaros")) {
           this.quality--;
         }
       }
     } else {
       if (this.quality < 50) {
         this.quality++;
-        if (this.name == "Backstage passes to a TAFKAL80ETC concert") {
+        if (this.name.equals("Backstage passes to a TAFKAL80ETC concert")) {
           if (this.daysRemaining < 11) {
             if (this.quality < 50) {
               this.quality++;
@@ -47,14 +47,14 @@ public class GildedRose {
         }
       }
     }
-    if (this.name != "Legendary Sulfuras, Hand of Ragnaros") {
+    if (!this.name.equals("Legendary Sulfuras, Hand of Ragnaros")) {
       this.daysRemaining--;
     }
     if (this.daysRemaining < 0) {
-      if (this.name != "Aged Brie") {
-        if (this.name != "Backstage passes to a TAFKAL80ETC concert") {
+      if (!this.name.equals("Aged Brie")) {
+        if (!this.name.equals("Backstage passes to a TAFKAL80ETC concert")) {
           if (this.quality > 0) {
-            if (this.name != "Legendary Sulfuras, Hand of Ragnaros") {
+            if (!this.name.equals("Legendary Sulfuras, Hand of Ragnaros")) {
               this.quality--;
             }
           }
