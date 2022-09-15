@@ -16,7 +16,7 @@ Hi and welcome to team Gilded Rose. As you know, we are a small inn with a prime
 
 - The Quality of an item is never negative
 
-- "Aged" items actually increases in Quality the older they get
+- "Aged" items actually increase in Quality the older they get
 
 - The Quality of an item is never more than 50, unless "Legendary"
 
